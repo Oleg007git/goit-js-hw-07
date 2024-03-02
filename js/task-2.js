@@ -26,19 +26,29 @@ const images = [
     alt: 'Zebras on Zebra',
   },
 ];
-images.forEach((image) => {
-  const listItem = document.createElement('li');
-  const imageElement = document.createElement('img');
 
-  imageElement.src = image.url;
-  imageElement.alt = image.alt;
+function createGallery(array) {
+  return array
+    .map(
+      ({ url, alt }) =>
+        `<li>
+        <img src="${url}" alt="${alt}">
+      </li>`
+    )
+    .join('');
+}
 
-  galleryList.appendChild(listItem);
+galleryList.innerHTML = createGallery(images);
 
-  listItem.appendChild(imageElement);
+// images.forEach((image) => {
+//   const listItem = document.createElement('li');
+//   const imageElement = document.createElement('img');
 
-  imageElement.style.display = 'block';
-  imageElement.style.width = '300px';
-  imageElement.style.height = '200px';
-});
-galleryList.appendChild(listItem);
+//   imageElement.src = image.url;
+//   imageElement.alt = image.alt;
+
+//   galleryList.appendChild(listItem);
+
+//   listItem.appendChild(imageElement);
+// });
+// galleryList.appendChild(listItem);
