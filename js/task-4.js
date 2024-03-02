@@ -1,4 +1,4 @@
-const form = querySelector('.login-form');
+const form = document.querySelector('.login-form');
 
 form.addEventListener('submit', handleSubmit);
 
@@ -8,11 +8,9 @@ function handleSubmit(event) {
   const elements = event.currentTarget.elements;
 
   const info = {
-    email: elements.email.value,
-    password: elements.password.value,
+    email: elements.email.value.trim(),
+    password: elements.password.value.trim(),
   };
+  console.log(info);
+  event.currentTarget.reset();
 }
-
-console.log(info);
-
-event.currentTarget.reset();
