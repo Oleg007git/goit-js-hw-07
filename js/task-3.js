@@ -1,5 +1,5 @@
-const inputText = querySelector('#name-input');
-const nameOut = querySelector('#name-output');
+const inputText = document.querySelector('#name-input');
+const nameOut = document.querySelector('#name-output');
 inputText.addEventListener('input', handleClick);
 
 function handleClick() {
@@ -11,4 +11,3 @@ function handleClick() {
     console.log(nameOut);
   }
 }
-handleClick();

@@ -1,4 +1,5 @@
-const galleryList = document.querySelector('ul.gallery');
+const galleryList = document.querySelector('.gallery');
+
 const images = [
   {
     url: 'https://images.pexels.com/photos/140134/pexels-photo-140134.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
@@ -35,9 +36,9 @@ images.forEach((image) => {
   galleryList.appendChild(listItem);
 
   listItem.appendChild(imageElement);
+
+  imageElement.style.display = 'block';
+  imageElement.style.width = '300px';
+  imageElement.style.height = '200px';
 });
-galleryList.appendChild(fragment);
-
-const element = document.querySelector('ul.gallery');
-
-gallery.style.back;
+galleryList.appendChild(listItem);
