@@ -1,8 +1,8 @@
-const countItems = document.querySelectorAll('.item > h2');
+const categoryItems = document.querySelectorAll('.item');
 
-console.log(`Numbers of categories: ${countItems.length}`);
+console.log(`Numbers of categories: ${categoryItems.length}`);
 
-const categoryHeadings = document.querySelectorAll(' h2');
+const categoryHeadings = document.querySelectorAll('.item > h2');
 
 console.log(categoryHeadings);
 
